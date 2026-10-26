@@ -1,24 +1,24 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Brand Colors */
-  --color-primary: #1E3A5F;
-  --color-primary-foreground: #FFFFFF;
-  --color-secondary: #E85D75;
-  --color-secondary-foreground: #FFFFFF;
-  --color-accent: #2ECDA7;
-  --color-accent-foreground: #1A1A2E;
-  --color-neutral-dark: #1A1A2E;
-  --color-neutral-light: #F7F8FC;
-  
+  /* Brand Colors - Warm & Organic */
+  --color-primary: #5a716a; /* Sage Green */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e07a5f; /* Terracotta / Coral */
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #f9da78; /* Warm Yellow */
+  --color-accent-foreground: #333333;
+  --color-neutral-dark: #2f3935;
+  --color-neutral-light: #fdfbf7; /* Off-white / Cream */
+
   /* Fonts */
-  --font-heading: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-stats: var(--font-space-grotesk), "Space Grotesk", ui-monospace, monospace;
-  
+  --font-heading: var(--font-georgia), 'Georgia Pro Condensed', 'Georgia', ui-serif, serif;
+  --font-body: var(--font-inter), 'Nunito', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-stats: var(--font-space-grotesk), 'Nunito', ui-monospace, monospace;
+
   /* Semantic color mappings */
   --color-background: oklch(var(--background));
   --color-foreground: oklch(var(--foreground));
@@ -53,26 +53,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: 1 0% 100%;
-  --foreground: 0.278 0.029 256.848;
-  --card: 1 0% 100%;
-  --card-foreground: 0.278 0.029 256.848;
-  --popover: 1 0% 100%;
-  --popover-foreground: 0.278 0.029 256.848;
-  --primary: 0.313 0.061 243.157;
-  --primary-foreground: 1 0% 100%;
-  --secondary: 0.641 0.177 9.116;
-  --secondary-foreground: 1 0% 100%;
-  --muted: 0.961 0.013 236.62;
-  --muted-foreground: 0.554 0.046 257.417;
-  --accent: 0.768 0.143 173.067;
-  --accent-foreground: 0.208 0.042 264.695;
+  --radius: 1.5rem; /* More organic, soft rounded corners */
+  --background: 98.43% 0.007 88; /* Off-white Cream #FDFBF7 */
+  --foreground: 32% 0.02 165; /* Dark sage neutral */
+  --card: 100% 0 0;
+  --card-foreground: 32% 0.02 165;
+  --popover: 100% 0 0;
+  --popover-foreground: 32% 0.02 165;
+  --primary: 53% 0.05 165; /* Sage Green #5A716A */
+  --primary-foreground: 100% 0 0;
+  --secondary: 65% 0.15 45; /* Terracotta / Coral #E07A5F */
+  --secondary-foreground: 100% 0 0;
+  --muted: 92% 0.01 165;
+  --muted-foreground: 55% 0.02 165;
+  --accent: 87% 0.15 95; /* Warm Yellow #F9DA78 */
+  --accent-foreground: 32% 0.02 165;
   --destructive: 0.577 0.245 27.325;
   --destructive-foreground: 1 0% 100%;
-  --border: 0.929 0.013 255.508;
-  --input: 0.929 0.013 255.508;
-  --ring: 0.313 0.061 243.157;
+  --border: 90% 0.01 165;
+  --input: 90% 0.01 165;
+  --ring: 53% 0.05 165;
   --chart-1: 0.646 0.222 41.116;
   --chart-2: 0.6 0.118 184.704;
   --chart-3: 0.398 0.07 227.392;
@@ -131,7 +131,12 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }

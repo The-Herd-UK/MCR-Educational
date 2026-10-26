@@ -1,5 +1,5 @@
-import { withPayload } from '@payloadcms/next/withPayload'
-import type { NextConfig } from 'next'
+import { withPayload } from '@payloadcms/next/withPayload';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn.mcr-educational.co.uk',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
     ],
   },
   async redirects() {
@@ -23,8 +27,8 @@ const nextConfig: NextConfig = {
       //   destination: '/new-path',
       //   permanent: true,
       // },
-    ]
+    ];
   },
-}
+};
 
-export default withPayload(nextConfig)
+export default withPayload(nextConfig);
