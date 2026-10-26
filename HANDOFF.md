@@ -51,9 +51,11 @@ The milestone due dates on GitHub (March to May 2026) are out of date. Phase 4 n
 
 ## Next steps, in order
 
-1. **Reconnect Vercel** (see [Deploys](#deploys) below). Until this is done, pushes won't deploy.
+1. **Sort out access.**
+   - An org owner should give the developers write access to this repo.
+   - Get the Vercel project moved into the agency's Vercel team, or have people added to it (see [Deploys](#deploys)).
 2. **Review and merge [PR #55][pr55].**
-   - Check it on its Vercel preview.
+   - Check it on its Vercel preview. You need Vercel access to open it.
    - Some images are Pexels placeholders. Replace them with real MCR photos, or get the client to approve them.
    - Merging deploys it to production.
 3. **Re-plan Phase 4 with the client**, then work through its issues:
@@ -131,11 +133,12 @@ Vercel deploys the site using its own GitHub integration; GitHub Actions doesn't
 - A push to `master` deploys to production at **https://mcr-educational.vercel.app**.
 - Every other branch and PR gets a preview URL.
 
-**After the move to The-Herd-UK, Vercel has to be reconnected.** The Vercel project (`mcr-educational`) is still in Hadi's personal Vercel account.
+Deploys kept working after the repo moved to The-Herd-UK; this was checked on 26 October 2026. However, the Vercel project (`mcr-educational`) is still in Hadi's personal Vercel account, which causes two problems:
 
-1. Install the Vercel GitHub app on the The-Herd-UK org. An org owner has to approve this.
-2. In Vercel, open **Project → Settings → Git** and connect `The-Herd-UK/MCR-Educational`.
-3. Consider moving the Vercel project into the agency's Vercel team, so it doesn't depend on one person.
+- Preview URLs redirect to a Vercel login, so only people with access to that account can open them.
+- Build logs and environment settings are visible only to Hadi.
+
+The fix is to transfer the project into the agency's Vercel team, so it doesn't depend on one person.
 
 The files in `.github/workflows/` target `main` and `develop`, and neither branch exists. As a result:
 
