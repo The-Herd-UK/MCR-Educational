@@ -8,7 +8,7 @@ The dedicated educational arm of MCR HQ CIC, providing alternative education pro
 
 ## Tech Stack
 
-- **Frontend:** Next.js 15 (App Router) + TypeScript
+- **Frontend:** Next.js 16 (App Router) + TypeScript
 - **Styling:** Tailwind CSS v4 + shadcn/ui
 - **CMS:** Payload CMS v3
 - **Database:** PostgreSQL
@@ -43,6 +43,7 @@ pnpm build
 
 ## Documentation
 
+- **[Handover Brief](HANDOFF.md) - Start here: background, current phase, and next steps**
 - [Project Strategy](docs/STRATEGY.md) - Full project strategy, wireframes, and technical decisions
 - [Contributing Guide](docs/CONTRIBUTING.md) - How to contribute
 
